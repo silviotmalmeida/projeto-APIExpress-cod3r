@@ -38,7 +38,7 @@ app.get(`/${url}/:id`, (req, res) => {
 
 //implementando o método POST (incluir)
 //a resposta será formatada em um JSON
-app.post(`/${url}`, (req, res, next) => {
+app.post(`/${url}`, (req, res) => {
   //criando o novo objeto com os dados dos parâmetros inserido no body da requisição
   const produto = bancoDeDados.salvarProduto({
     nome: req.body.nome,
@@ -51,7 +51,7 @@ app.post(`/${url}`, (req, res, next) => {
 
 //implementando o método PUT (editar) com um filtro :id
 //a resposta será formatada em um JSON
-app.put(`/${url}/:id`, (req, res, next) => {
+app.put(`/${url}/:id`, (req, res) => {
   //editando o objeto com os dados dos parâmetros inserido no body da requisição
   //a partir do id informado na request
   const produto = bancoDeDados.salvarProduto({
@@ -66,7 +66,7 @@ app.put(`/${url}/:id`, (req, res, next) => {
 
 //implementando o método DELETE (apagar) com um filtro :id
 //a resposta será formatada em um JSON
-app.delete(`/${url}/:id`, (req, res, next) => {
+app.delete(`/${url}/:id`, (req, res) => {
   //apagando o registro referente ao id informado na request
   const produto = bancoDeDados.excluirProduto(req.params.id);
 
