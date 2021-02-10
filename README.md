@@ -10,3 +10,5 @@ O projeto encontra-se dockerizado para facilitar a implantação. As orientaçõ
 * Para iniciar a execução utiliza-se o comando "sudo ./startContainers.sh";
 
 * Para encerrar a execução utiliza-se o comando "sudo ./stopContainers.sh";
+
+Foram incluídos diversos comentários para facilitar o entendimento do código.
